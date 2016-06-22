@@ -66,7 +66,7 @@ class BotController
   
   def popular_tweets( twitter_handle, threshold=2 )
     tweet_ids = []
-    tweets = @client.search("from:#{twitter_handle} exclude:retweets", result_type: "recent").take(100)
+    tweets = @client.search("from:#{twitter_handle} exclude:retweets", result_type: "recent").take(50)
     tweets.each do |tweet|
       count = tweet.favorite_count + tweet.retweet_count
       if count >= threshold
