@@ -24,17 +24,17 @@ class BotController
   def process
   
     ## @EveryDemDonor
-    popular_tweet_ids = popular_tweets( "EveryDemDonor" )
+    popular_tweet_ids = popular_tweets( "EveryDemDonor", 4 )
     @client.retweet( popular_tweet_ids.first ) if popular_tweet_ids.any?
     pause
 
     ## @EveryGOPDonor
-    popular_tweet_ids = popular_tweets( "EveryGOPDonor" )
+    popular_tweet_ids = popular_tweets( "EveryGOPDonor", 4 )
     @client.retweet( popular_tweet_ids.first ) if popular_tweet_ids.any?
     pause
 
     ## @EveryTrumpDonor
-    popular_tweet_ids = popular_tweets( "EveryTrumpDonor" )
+    popular_tweet_ids = popular_tweets( "EveryTrumpDonor", 4 )
     @client.retweet( popular_tweet_ids.first ) if popular_tweet_ids.any?
     pause
     
@@ -44,7 +44,7 @@ class BotController
     pause
     
     ## @TrendingHx
-    popular_tweet_ids = popular_tweets( "TrendingHx" )
+    popular_tweet_ids = popular_tweets( "TrendingHx", 4 )
     @client.retweet( popular_tweet_ids.first ) if popular_tweet_ids.any?
     pause
 
