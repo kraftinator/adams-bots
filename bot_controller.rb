@@ -24,14 +24,14 @@ class BotController
   def process
   
     ## @EveryDemDonor
-    popular_tweet_ids = popular_tweets( "EveryDemDonor", 4 )
-    @client.retweet( popular_tweet_ids.first ) if popular_tweet_ids.any?
-    pause
+    #popular_tweet_ids = popular_tweets( "EveryDemDonor", 4 )
+    #@client.retweet( popular_tweet_ids.first ) if popular_tweet_ids.any?
+    #pause
 
     ## @EveryGOPDonor
-    popular_tweet_ids = popular_tweets( "EveryGOPDonor", 4 )
-    @client.retweet( popular_tweet_ids.first ) if popular_tweet_ids.any?
-    pause
+    #popular_tweet_ids = popular_tweets( "EveryGOPDonor", 4 )
+    #@client.retweet( popular_tweet_ids.first ) if popular_tweet_ids.any?
+    #pause
 
     ## @EveryTrumpDonor
     popular_tweet_ids = popular_tweets( "EveryTrumpDonor", 4 )
@@ -39,7 +39,7 @@ class BotController
     pause
     
     ## @TheSeinfeldBot
-    popular_tweet_ids = popular_tweets( "TheSeinfeldBot" )
+    popular_tweet_ids = popular_tweets( "TheSeinfeldBot", 4 )
     @client.retweet( popular_tweet_ids.first ) if popular_tweet_ids.any?
     pause
     
@@ -59,9 +59,9 @@ class BotController
     pause
     
     ## @ConfederateBot
-    popular_tweet_ids = popular_tweets( "ConfederateBot" )
-    @client.retweet( popular_tweet_ids.first ) if popular_tweet_ids.any?
-    pause
+    #popular_tweet_ids = popular_tweets( "ConfederateBot" )
+    #@client.retweet( popular_tweet_ids.first ) if popular_tweet_ids.any?
+    #pause
     
     ## @colombia_bot
     popular_tweet_ids = popular_tweets( "colombia_bot" )
