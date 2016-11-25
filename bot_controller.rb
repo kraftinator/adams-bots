@@ -35,7 +35,14 @@ class BotController
 
     ## @EveryTrumpDonor
     popular_tweet_ids = popular_tweets( "EveryTrumpDonor", 20 )
-    @client.retweet( popular_tweet_ids.first ) if popular_tweet_ids.any?
+    begin
+      @client.retweet( popular_tweet_ids.first ) if popular_tweet_ids.any?
+    rescue Twitter::Error::Forbidden => error
+      puts "[ERROR] Twitter::Error::Forbidden: #{ $! }"
+      @client.retweet( popular_tweet_ids[1] ) if popular_tweet_ids.size > 1
+    rescue
+      puts "[ERROR] Unknown Error: #{ $! }"
+    end
     pause
     
     ## @TheSeinfeldBot
@@ -107,7 +114,7 @@ class BotController
   end
   
   def pause
-    sleep( rand(10)+5 )
+    sleep( rand(5)+5 )
   end
 
 end
