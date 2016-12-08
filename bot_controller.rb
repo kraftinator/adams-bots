@@ -24,9 +24,9 @@ class BotController
   def process
   
     ## @EveryDemDonor
-    #popular_tweet_ids = popular_tweets( "EveryDemDonor", 4 )
-    #@client.retweet( popular_tweet_ids.first ) if popular_tweet_ids.any?
-    #pause
+    popular_tweet_ids = popular_tweets( "EveryDemDonor", 4 )
+    @client.retweet( popular_tweet_ids.first ) if popular_tweet_ids.any?
+    pause
 
     ## @EveryGOPDonor
     #popular_tweet_ids = popular_tweets( "EveryGOPDonor", 4 )
