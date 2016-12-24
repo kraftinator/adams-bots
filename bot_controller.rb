@@ -34,7 +34,7 @@ class BotController
     #pause
 
     ## @EveryTrumpDonor
-    popular_tweet_ids = popular_tweets( "EveryTrumpDonor", 10 )
+    popular_tweet_ids = popular_tweets( "EveryTrumpDonor", 5 )
     begin
       @client.retweet( popular_tweet_ids.first ) if popular_tweet_ids.any?
     rescue Twitter::Error::Forbidden => error
