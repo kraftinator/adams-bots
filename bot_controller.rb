@@ -66,9 +66,9 @@ class BotController
     pause
     
     ## @ConfederateBot
-    #popular_tweet_ids = popular_tweets( "ConfederateBot" )
-    #@client.retweet( popular_tweet_ids.first ) if popular_tweet_ids.any?
-    #pause
+    popular_tweet_ids = popular_tweets( "ConfederateBot" )
+    @client.retweet( popular_tweet_ids.first ) if popular_tweet_ids.any?
+    pause
     
     ## @colombia_bot
     popular_tweet_ids = popular_tweets( "colombia_bot" )
@@ -88,11 +88,11 @@ class BotController
     ## @RepHalTuring
     popular_tweet_ids = popular_tweets( "RepHalTuring" )
     @client.retweet( popular_tweet_ids.first ) if popular_tweet_ids.any?
-    pause
+    #pause
     
     ## @RobotGeorge3
-    popular_tweet_ids = popular_tweets( "RobotGeorge3" )
-    @client.retweet( popular_tweet_ids.first ) if popular_tweet_ids.any?
+    #popular_tweet_ids = popular_tweets( "RobotGeorge3" )
+    #@client.retweet( popular_tweet_ids.first ) if popular_tweet_ids.any?
     
   end
   
