@@ -88,6 +88,11 @@ class BotController
     ## @RepHalTuring
     popular_tweet_ids = popular_tweets( "RepHalTuring" )
     @client.retweet( popular_tweet_ids.first ) if popular_tweet_ids.any?
+    pause
+
+    ## @EveryMooreDonor
+    popular_tweet_ids = popular_tweets( "EveryMooreDonor" )
+    @client.retweet( popular_tweet_ids.first ) if popular_tweet_ids.any?
     #pause
     
     ## @RobotGeorge3
